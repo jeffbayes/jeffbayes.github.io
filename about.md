@@ -1,21 +1,22 @@
 ---
 layout: page
 title: "About"
-header-img: "img/about-bg.jpg"
+header-img: "img/ggb-bg.jpg"
 ---
 
-Hey there! Thanks for taking the time to learn a little about me. My name is Jeff Bayes, and I'm currently a CS student at the University of Oregon, expecting to graduate after Fall of 2015. Before we get started, here are some things you may or may not be interested in: my [LinkedIn](https://www.linkedin.com/in/jeffbayes), [Github](https://github.com/jeffbayes) and [resume]({{site.url}}/assets/JeffBayesResume.pdf). Drop a line, any time for any reason. I'd be <em>literally</em> thrilled to give you a hand, or talk about whatever.
+Thanks for taking the time to learn a little about me. I'm Jeff.
+
+I'm currently a Computer Science student at the University of Oregon, expecting to graduate after Winter 2016. I'm currently interning as a Front-end Developer at Azuqua in Seattle, WA, working on a product development tool.
 
 <br>
-Picture went here
+<figure>
+  <img src="{{site.url}}/img/dreamteam.jpg" style="border: 2px solid black; display: block; margin-left: auto; margin-right: auto;">
+  <figcaption style="text-align: center;">Me (middle) with the Green Garter Band alumni</figcaption>
+</figure>
 <br>
 
-I started programming in January of 2013. Since then, most of my industry experience has been in the context of web development. I've worked for Burke Software, a web consulting business based out of NYC, and Azuqua, a cloud integration startup based in downtown Seattle. Although my industry experience has been in web development, I'm still a CS student at heart - problem solving is the best.
+I was a board member with the UO Web Development Club, and am leading it this year through a pivot and rebrand to become the UO Dev Club, for general software development. Check out our website... when it's done being under construction.
 
-In recent news, I've been co-leading the [UO Web Development Club](http://uowebdev.github.io) through its first full year, traveled to CodeDay Portland and built a prototype D&amp;D campaign management application, [Ymir](http://github.com/jeffbayes/Ymir), and placed 2nd at Startup Weekend with our entry, Hoot Housing. I've also jumped into the business side of life by joining the Entrepreneurship club.
+Coding, strength training, and spending time with friends is what makes my life worth living. I like to believe I can still play the trumpet, too.
 
-Besides my career, school, or computer science, I'm involved with quite a few other hobbies as well. My favorite hobby is improving in strength athletics: strongman, powerlifting, weightlifting, bodybuilding, and recently I've been trying my hand at CrossFit, too. Besides that, I've played trumpet for twelve years now, two of them in the wonderful UO Green Garter Band, but I'm taking most of this year off to focus on my career. 
-
-Blog post topics may span many topics, including: programming, software, strength athletics, music, finance, life, self-improvement... or whatever topic may come up that I feel the burning need to throw my two cents into the conversation.
-
-Portfolio of works in software, music, and maaaaybe weightlifting probably coming soon. Updated on the 27th of January, 2015.
+I'll have more content for you soon. 

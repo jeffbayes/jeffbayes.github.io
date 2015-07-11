@@ -2,12 +2,13 @@
 title: Jeff Bayes
 header-img: img/home-bg.jpg
 email: jbayes92@gmail.com
-description: "Write your site description here. It will be used as your sites meta description as well!"
+description: "The personal website and blog of Jeff Bayes. From Eugene, OR, currently in Seattle, WA. Software engineer, programmer, strength athlete, musician, trumpet player, student at University of Oregon."
 baseurl: ""
-url: "http://yourdomain.com"
+url: "http://localhost:4000/"
 twitter_username: jbayes92
-github_username: jeffbayes
 facebook_username: jbayes92
+github_username: jeffbayes
+linkedin_username: jeffbayes
 
 # Build settings
 markdown: kramdown

@@ -19,4 +19,6 @@ I was a board member with the UO Web Development Club, and am leading it this ye
 
 Coding, strength training, and spending time with friends is what makes my life worth living. I like to believe I can still play the trumpet, too.
 
-I'll have more content for you soon. If you'd like to contact me in the meantime, shoot me a message on your favorite social media platform. Links are on the bottom of this page.
+I'll have more content for you soon. 
+
+If you'd like to contact me in the meantime, shoot me a message on your favorite social media platform. Links are on the bottom of this page. If you're the hiring type, check out my [LinkedIn](https://www.linkedin.com/in/jeffbayes), my [resume]({{site.url}}/assets/JeffBayesResume.pdf), or just go ahead and contact me.

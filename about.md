@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "About"
-header-img: "img/ggb-bg.jpg"
+header-img: "img/about-bg.jpg"
 ---
 
 Thanks for taking the time to learn a little about me. I'm Jeff.
@@ -17,8 +17,8 @@ I'm currently a Computer Science student at the University of Oregon, expecting 
 
 I was a board member with the UO Web Development Club, and am leading it this year through a pivot and rebrand to become the UO Dev Club, for general software development. Check out our website... when it's done being under construction.
 
-Coding, strength training, and spending time with friends is what makes my life worth living. I like to believe I can still play the trumpet, too.
+Coding, strength training, and spending time with friends is what makes my life worth living. I like to believe I can still play the trumpet, too. Check out some of the music I've worked on by heading to my [music page]({{site.url}}/music).
 
 I'll have more content for you soon. 
 
-If you'd like to contact me in the meantime, shoot me a message on your favorite social media platform. Links are on the bottom of this page. If you're the hiring type, check out my [LinkedIn](https://www.linkedin.com/in/jeffbayes), my [resume]({{site.url}}/assets/JeffBayesResume.pdf), or just go ahead and contact me.
+If you'd like to contact me in the meantime, shoot me a message on your favorite social media platform. Links are on the bottom of this page. If you're the hiring type, check out my [LinkedIn](https://www.linkedin.com/in/jeffbayes), my [resume]({{site.url}}/assets/JeffBayesResume.pdf), or just go ahead and contact me - my email is on the resume.

@@ -27,5 +27,7 @@ We met Krell, an awesome guy with all the experience in the world, at the Indie 
 
 Thanks to numerous sponsors, we managed to get enough funds for T-shirts, stickers, and great food to last us 24 hours. We sold out the event to 41 students, and lots of solid projects came out the other side. In our haste, we didn't do a great job of documenting all the projects, but we blew the faculty and local tech industry away with the quality of both the projects made and the event itself.
 
-Today we're taking some time to look at what went wrong, what we could have done better, and creating a document for next year's hackathon team to follow. But right now, all I care about is that we did it. Momentum now exists at the University of Oregon to create a hacker culture, to create a culture of excellence and craftiness among the student body, and to continue on this spur-of-the-moment hackathon for years to come. I'm excited to see what life throws at me next.
+Today we're taking some time to look at what went wrong, what we could have done better, and creating a document for next year's hackathon team to follow. But right now, all I care about is that we did it. Momentum now exists at the University of Oregon to create a hacker culture, to create a culture of excellence and craftiness among the student body, and to continue on this spur-of-the-moment hackathon for years to come. 
+
+I'm excited to see what life throws at me next.
 

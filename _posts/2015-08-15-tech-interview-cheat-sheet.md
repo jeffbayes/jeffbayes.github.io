@@ -1,21 +1,35 @@
-## Tech Interview Cheat Sheet
+---
+layout:       post
+title:        "Technical Interview Cheat Sheet"
+subtitle:     "One stop shopping to brush up for an interview"
+date:         2015-11-02 11:30:00
+header-img:   "img/building-blocks.jpg"
+---
 
-Studying for a tech interview sucks, so here's a cheat sheet to help! Forked from [TSiege's gist](https://gist.github.com/TSiege/cbb0507082bb18ff7e4b), modified to fit the format from Cracking the Coding Interview a bit better.
+## Technical Interview Cheat Sheet
+
+I've been working on a fork of [TSiege's gist](https://gist.github.com/TSiege/cbb0507082bb18ff7e4b) on studying for technical interviews on and off for the last month or so. I modified it to fit the format from Cracking the Coding Interview a bit better. Hope you get something out of this -- I'll probably repost it on the [UO Dev Club](https://uodevclub.github.io/) blog soon.
+
+<hr>
 
 Programming interviews are both about displaying your command of programming fundamentals, as well as taking those fundamentals and applying them to a problem you've never seen before. The better your fundamentals, the better it will go. The fundamentals break down into two or three major categories: data structures, algorithms, and the concepts underlying why those data structures and algorithms are optimal.
 
-This list is meant to be both a quick guide and reference for further research into these topics. There's no way we can cover everything in depth with just a cheat sheet. If you're unfamiliar with any of the terms below, take it upon yourself to learn the content better.
+This list is meant to be both a quick guide and reference for further research into these topics. There's no way we can cover everything in depth with just a cheat sheet. If you're unfamiliar with any of the terms below, take it upon yourself to learn the content better. If anything under here is unfamiliar, you're very vulnerable to having the holes in your knowledge seen in a programming interview. If you have command of everything in this section, you have the foundation required to solve most, if not any, problem thrown at you.
+
+First, I must warn you: _in order to even make it to this point,_ you will need to pass a phone screen, first interview, or some other "soft skills" interview. The skills needed to succeed are not covered here, but I'll give a quick summary on this:
+
+Have strong intellectual control over the projects you've worked with. This means you need to know all the typical questions -- _"What was the hard part?" "What did you do?" "Tell me about the biggest challenge you had."_ Be able to answer any question about two or three major projects you've worked on. For internships at many companies (meaning: not a destination company), this will be your **ENTIRE** interview. If you can thoroughly explain your projects and have solid answers for soft questions like these, your chances of making it to the next round are far increased.
+
+With no further ado, the Technical Interview Cheat Sheet!
+
+<hr>
 
 
-## "Need To Know"
+## Data Structures and Types
 
-The content below is all need-to-know. If anything under here is unfamiliar, you're very vulnerable to having the holes in your knowledge seen in a programming interview. If you have command of everything in this section, you have the foundation required to solve most, if not any, problem thrown at you.
+### Linked List
 
-
-## NTN Data Structures
-
-### **Linked List**
-#### Definition: 
+#### Definition:
 - Stores data with **nodes** that point to other nodes.
   - Nodes, at its most basic it has one datum and one reference (another node).
   - A linked list _chains_ nodes together by pointing one node's reference towards another node.  
@@ -37,9 +51,10 @@ The content below is all need-to-know. If anything under here is unfamiliar, you
 - Optimized Search:   Linked Lists: O(n)
 - Insertion:          Linked Lists: O(1)  
 
+<hr>
+### Binary Tree
 
-### **Binary Tree**
-#### Definition: 
+#### Definition:
 - Is a tree like data structure where every node has at most two children.
   - There is one left and right child node.
 
@@ -59,8 +74,9 @@ The content below is all need-to-know. If anything under here is unfamiliar, you
 - Search:    Binary Search Tree: O(log n)
 - Insertion: Binary Search Tree: O(log n) 
 
+<hr>
+### Array
 
-### **Array**
 #### Definition:
 - Stores data elements based on an sequential, most commonly 0 based, index.
 - Based on [tuples](http://en.wikipedia.org/wiki/Tuple) from set theory.
@@ -80,9 +96,10 @@ The content below is all need-to-know. If anything under here is unfamiliar, you
 - Optimized Search: Linear array: O(log n),   Dynamic array: O(log n)
 - Insertion:        Linear array: n/a         Dynamic array: O(n)
 
+<hr>
+### Hash Table or Hash Map
 
-### **Hash Table or Hash Map**
-#### Definition: 
+#### Definition:
 - Stores data with key value pairs.
 - **Hash functions** accept a key and return an output unique only to that specific key. 
   - This is known as **hashing**, which is the concept that an input and an output have a one-to-one correspondence to map information.
@@ -100,17 +117,50 @@ The content below is all need-to-know. If anything under here is unfamiliar, you
 - Search:           Hash Tables: O(1)
 - Insertion:        Hash Tables: O(1)  
 
+<hr>
+### Tries
+
+TODO: This section is under construction.
+
+<hr>
+### Graphs
+
+#### Definition:
+- Specifies relationships among a collection of items.
+- Consists of a set of objects called _nodes_.
+- Related nodes are connected by _edges_.
+- Graphs can be either _directed_ or _undirected_.
+  - A _directed graph_ has directed edges, signifying a one-way relationship between nodes. There can be a directed edge one way and another directed edge back toward the node of origin, but they are distinct and different edges.
+  - An _undirected graph_ has undirected edges, signifying a two-way relationship between nodes. Traversal one way is the same as traversal on the way back; it is the same edge. These are **far** more common than directed graphs, and as such is the default when we refer to a generic graph.
+
+<br>
+<figure>
+  <img src="{{site.url}}/img/graph-comp.png" style="border: 2px solid black; display: block; margin-left: auto; margin-right: auto;">
+  <figcaption style="text-align: center;">Image Credit: David Easley and Jon Kleinberg</figcaption>
+</figure>
+<br>
+
+#### What you need to know:
+- Graphs are ubiquitous in both theoretical and applied computer science.
+  - As such, many many algorithms are already standard for handling graphs: Djikstra's, breadth-first or depth-first search, Floyd-Warshall, etc.
+- Trees can be thought of as graphs; the connnections between nodes are edges that can normally be traversed both ways equally through the parent-child relationship. Most algorithms that apply to one can be applied to the other as well.
+
+#### Big O efficiency:
+Graphs are an abstract data type that is generally represented by something between a tree and linked list. Whatever you choose in that regard will maintain its Big O properties, plus however you choose to represent the Node and Edge.
+
+#### Example:
+TODO: This would probably be a good idea to represent since there is so much variability in implementation.
 
 ### Add to this section...
-- Tries: what is, how to implement, use cases?
-- Graphs: what is, how to implement, use cases?
 - Heaps: what is, how to implement, use cases?
 - Other Trees (?)
 
+<hr><hr>
 
-## NTN Algorithms: Search
+## Algorithms: Search
 
-### **Breadth First Search**
+### Breadth First Search
+
 #### Definition:
 - An algorithm that searches a tree (or graph) by searching levels of the tree first, starting at the root.
   - It finds every node on the same level, most often moving left to right. 
@@ -125,12 +175,12 @@ The content below is all need-to-know. If anything under here is unfamiliar, you
   - The queue uses more memory because it needs to stores pointers
   
 #### Big O efficiency:
-- Search: Breadth First Search: O(|E| + |V|)
+- Search: Breadth First Search: O(\|E\| + \|V\|)
 - E is number of edges
 - V is number of vertices
 
+### Depth First Search
 
-### **Depth First Search**
 #### Definition:
 - An algorithm that searches a tree (or graph) by searching depth of the tree first, starting at the root.
   - It traverses left down a tree until it cannot go further.
@@ -145,7 +195,7 @@ The content below is all need-to-know. If anything under here is unfamiliar, you
   - Once it cannot go further left it begins evaluating the stack.
   
 #### Big O efficiency:
-- Search: Depth First Search: O(|E| + |V|)
+- Search: Depth First Search: O(\|E\| + \|V\|)
 - E is number of edges
 - V is number of vertices
 
@@ -157,16 +207,19 @@ The content below is all need-to-know. If anything under here is unfamiliar, you
 
 #### Nuances:
   - Because BFS uses queues to store information about the nodes and its children, it could use more memory than is available on your computer.  (But you probably won't have to worry about this.)
-  - If using a DFS on a tree that is very deep you might go unnecessarily deep in the search. See [xkcd](http://xkcd.com/761/) for more information.
+  - If using a DFS on a tree that is very deep you might go unnecessarily deep in the search. See [this xkcd](http://xkcd.com/761/) for more information.
   - Breadth First Search tends to be a looping algorithm.
   - Depth First Search tends to be a recursive algorithm.
 
-### Binary Search [add me please]
+### Binary Search
+
+TODO: This section is under construction.
 
 
-## NTN Algorithms: Sorting
+## Algorithms: Sorting
 
-### **Merge Sort**
+### Merge Sort
+
 #### Definition:
 - A comparison based sorting algorithm
   - Divides entire dataset into groups of at most two.
@@ -183,7 +236,8 @@ The content below is all need-to-know. If anything under here is unfamiliar, you
 - Average Case Sort: Merge Sort: O(n log n)
 - Worst Case Sort: Merge Sort: O(n log n)
 
-### **Quicksort**
+### Quicksort
+
 #### Definition:
 - A comparison based sorting algorithm
   - Divides entire dataset in half by selecting the average element and putting all smaller elements to the left of the average.
@@ -200,7 +254,8 @@ The content below is all need-to-know. If anything under here is unfamiliar, you
 - Average Case Sort: Merge Sort: O(n log n)
 - Worst Case Sort: Merge Sort: O(n^2)
 
-###**Bubble Sort**
+###Bubble Sort
+
 #### Definition:
 - A comparison based sorting algorithm
   - It iterates left to right comparing every couplet, moving the smaller element to the left.
@@ -220,9 +275,10 @@ The content below is all need-to-know. If anything under here is unfamiliar, you
 - Merge Sort divides the set into the smallest possible groups immediately then reconstructs the incrementally as it sorts the groupings.
 - Quicksort continually divides the set by the average, until the set is recursively sorted.
 
-## NTN Concepts: Algorithms
+## Concepts: Algorithms
 
-### **Recursive Algorithms**
+### Recursive Algorithms
+
 #### Definition:
 - An algorithm that calls itself in its definition.
   - **Recursive case** a conditional statement that is used to trigger the recursion.
@@ -236,7 +292,8 @@ The content below is all need-to-know. If anything under here is unfamiliar, you
   - Often used in Depth First Search
 
 
-### **Iterative Algorithms**
+### Iterative Algorithms
+
 #### Definition:
 - An algorithm that is called repeatedly but for a finite number of times, each time being a single iteration.
   - Often used to move incrementally through a data set.
@@ -266,7 +323,8 @@ recursive method (array, n)       | iterative method (array)
     exit loop                     |
 ```
 
-### **Greedy Algorithm**
+### Greedy Algorithm
+
 #### Definition:
 - An algorithm that, while executing, selects only the information that meets a certain criteria.
 - The general five components, taken from [Wikipedia](http://en.wikipedia.org/wiki/Greedy_algorithm#Specifics):

@@ -17,7 +17,7 @@ You see, my roommate John is a half-breed between the Business school and CS sch
 <br>
 <figure>
   <img src="{{site.url}}/img/hacktown-logo.png" style="border: 2px solid black; display: block; margin-left: auto; margin-right: auto;">
-  <figcaption style="text-align: center;">Our logo and sponsors for the inaugural HackTownUSA Coding Marathon</figcaption>
+  <figcaption style="text-align: center;"><em>Our logo and sponsors for the inaugural HackTownUSA Coding Marathon</em></figcaption>
 </figure>
 <br>
 

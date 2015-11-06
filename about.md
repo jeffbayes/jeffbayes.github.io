@@ -13,7 +13,7 @@ I consider myself somewhere between a project manager and a full stack developer
 <br>
 <figure>
   <img src="{{site.url}}/img/dreamteam.jpg" style="border: 2px solid black; display: block; margin-left: auto; margin-right: auto;">
-  <figcaption style="text-align: center;">Me (middle) with the Green Garter Band alumni</figcaption>
+  <figcaption style="text-align: center;"><em>Me (middle) with the Green Garter Band alumni</em></figcaption>
 </figure>
 <br>
 

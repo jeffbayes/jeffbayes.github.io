@@ -136,7 +136,7 @@ TODO: This section is under construction.
 <br>
 <figure>
   <img src="{{site.url}}/img/graph-comp.png" style="border: 2px solid black; display: block; margin-left: auto; margin-right: auto;">
-  <figcaption style="text-align: center;">Image Credit: David Easley and Jon Kleinberg</figcaption>
+  <figcaption style="text-align: center;"><em>Image Credit: David Easley and Jon Kleinberg</em></figcaption>
 </figure>
 <br>
 

@@ -6,7 +6,7 @@ header-img: "img/about-bg.jpg"
 
 Thanks for taking the time to learn a little about me. I'm Jeff.
 
-I'm currently a Computer Science student at the University of Oregon, expecting to graduate after Winter 2016. I have interned as a Front-end Developer at Azuqua in Seattle, WA, working on a product development tool. I brought the University of Oregon Web Development Club from once-per-term meetings to productive weekly meetings, hosting an annual hackathon, and expanding the scope from web development to general software development.
+I'm currently a Computer Science student at the University of Oregon, expecting to graduate after Winter 2016. (Update: Just graduated, and looking for my next gig!) I have interned as a Front-end Developer at Azuqua in Seattle, WA, working on a product development tool. I brought the University of Oregon Web Development Club from once-per-term meetings to productive weekly meetings, hosting an annual hackathon, and expanding the scope from web development to general software development.
 
 I consider myself somewhere between a project manager and a full stack developer with a front-end slant. In my experience, project management and front-end development are all about asking the right questions.
 

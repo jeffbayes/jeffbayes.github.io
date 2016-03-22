@@ -1,7 +1,6 @@
 ---
 layout:         post
 title:          "Still Surviving"
-subtitle:       "As we approach the finish line..."
 date:           2016-01-22 19:40:00
 ---
 

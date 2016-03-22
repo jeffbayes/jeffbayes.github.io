@@ -1,7 +1,6 @@
 ---
 layout:         post
 title:          "HackTownUSA"
-subtitle:       "The planning was more like a hellish sprint than the marathon pun we were going for..."
 date:           2015-10-29 15:49:00
 header-img:     "img/hacktown-bg.png"
 tags:           [coding, cs, devclub]

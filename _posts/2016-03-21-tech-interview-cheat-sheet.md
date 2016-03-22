@@ -182,8 +182,7 @@ Graphs are an abstract data type that is generally represented by something betw
 #### Example:
 TODO: This would probably be a good idea to represent since there is so much variability in implementation.
 
-### Add to this section...
-- Heaps: what is, how to implement, use cases?
+#### Add to this section...
 - Other N-ary trees, oddball questions
 
 <hr><hr>
@@ -244,7 +243,18 @@ TODO: This would probably be a good idea to represent since there is so much var
 
 ### Binary Search
 
-TODO: This section is under construction.
+#### Definition
+- Executed on a sorted array, this is an O(log n) search algorithm for arrays that mimics the structure of a balanced BST.
+- In a while loop, start by checking the middle index (max + low / 2) for your value.
+  - If array[mid] == your value, woo! You're done.
+  - If array[mid] > your value, it can't be any higher than that on the array. Upper bound of array is the previous minimum minus one.
+  - If array[mid] < your value, it can't be any lower than that on the array. Lower bound of array is the previous minimum plus one.
+
+#### What you need to know:
+- Be careful on how you calculate min, and watch the +1 / -1 on upper and lower bounds. Those off-by-one errors are nasty.
+
+#### Big O Efficiency:
+- Binary Search is a O(log n) operation.
 
 
 ## Algorithms: Sorting
@@ -261,9 +271,11 @@ TODO: This section is under construction.
 #### What you need to know:
 - This is one of the most basic sorting algorithms.
 - Know that it divides all the data into as small possible sets then compares them.
+- Natural merge sort, a variant, exploits existing runs of sorted data to approach O(n) best case.
+  - This is a key component of **Timsort**, the sort of choice in the Python standard library.
 
 #### Big O efficiency:
-- Best Case Sort: Merge Sort: O(n)
+- Best Case Sort: Merge Sort: O(n log n), unless natural variant
 - Average Case Sort: Merge Sort: O(n log n)
 - Worst Case Sort: Merge Sort: O(n log n)
 

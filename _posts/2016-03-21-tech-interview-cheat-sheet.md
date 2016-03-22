@@ -1,14 +1,13 @@
 ---
 layout:       post
 title:        "Technical Interview Cheat Sheet"
-subtitle:     "One stop shopping to brush up for an interview"
-date:         2015-11-02 11:30:00
+date:         2016-03-21 21:15:00
 header-img:   "img/building-blocks.jpg"
 ---
 
 ## Technical Interview Cheat Sheet
 
-I've been working on a fork of [TSiege's gist](https://gist.github.com/TSiege/cbb0507082bb18ff7e4b) on studying for technical interviews on and off for the last month or so. I modified it to fit the format from Cracking the Coding Interview a bit better. Hope you get something out of this -- I'll probably repost it on the [UO Dev Club](https://uodevclub.github.io/) blog soon.
+I've been working on a fork of [TSiege's gist](https://gist.github.com/TSiege/cbb0507082bb18ff7e4b) on studying for technical interviews on and off for the last six months or so. I modified it to fit the format from Cracking the Coding Interview a bit better. Hope you get something out of this -- I'll probably repost it on the [UO Dev Club](https://uodevclub.github.io/) blog soon.
 
 <hr>
 
@@ -31,24 +30,25 @@ With no further ado, the Technical Interview Cheat Sheet!
 
 #### Definition:
 - Stores data with **nodes** that point to other nodes.
-  - Nodes, at its most basic it has one datum and one reference (another node).
+  - Nodes, at their most basic, have one datum and one reference (another node).
   - A linked list _chains_ nodes together by pointing one node's reference towards another node.  
 
 #### What you need to know:
 - Designed to optimize insertion and deletion, slow at indexing and searching.
-- **Doubly linked list** has nodes that reference the previous node.
-- **Circularly linked list** is simple linked list whose **tail**, the last node, references the **head**, the first node.
-- **Stack**, commonly implemented with linked lists but can be made from arrays too.
+- **Doubly linked lists** have nodes that reference the previous node.
+- A **circularly linked list** is simple linked list whose **tail**, the last node, references the **head**, the first node.
+- **Stacks** are commonly implemented with linked lists, but can also be made from arrays.
   - Stacks are **last in, first out** (LIFO) data structures.
   - Made with a linked list by having the head be the only place for insertion and removal.
-- **Queues**, too can be implemented with a linked list or an array.
+  - Array implementation pushes and pops to the end of the array, with another variable tracking the final index position.
+- **Queues**, too, can be implemented with a linked list or an array.
   - Queues are a **first in, first out** (FIFO) data structure.
   - Made with a doubly linked list that only removes from head and adds to tail.  
+  - Array implementation pushes to end of array and pops from front of array. Two variables needed, to track front and back of queue. If you're really swanky, you can use the array circularly.
 
 #### Big O efficiency:
 - Indexing:           Linked Lists: O(n)
 - Search:             Linked Lists: O(n)
-- Optimized Search:   Linked Lists: O(n)
 - Insertion:          Linked Lists: O(1)  
 
 <hr>
@@ -57,6 +57,7 @@ With no further ado, the Technical Interview Cheat Sheet!
 #### Definition:
 - Is a tree like data structure where every node has at most two children.
   - There is one left and right child node.
+  - "N-ary" trees, including **tries / prefix trees**, have more than two children. Those are covered later.
 
 #### What you need to know:
 - Designed to optimize searching and sorting.
@@ -70,9 +71,25 @@ With no further ado, the Technical Interview Cheat Sheet!
   - Because of the above it is more likely to be used as a data structure than a binary tree.
 
 #### Big O efficiency:
-- Indexing:  Binary Search Tree: O(log n)
-- Search:    Binary Search Tree: O(log n)
-- Insertion: Binary Search Tree: O(log n) 
+- Indexing:       Binary Search Tree: O(log n)      Binary Tree: O(n)
+- Search:         Binary Search Tree: O(log n)      Binary Tree: O(n)
+- Insertion:      Binary Search Tree: O(log n)      Binary Tree: O(n)
+
+<hr>
+
+### Binary Heap
+
+#### Definition
+- Organized by some priority; generally a "min-heap" or "max-heap."
+- Always maintains the **heap property** and **shape property**.
+  - _Heap Property_: All nodes are either greater than or equal to (max-heap) or less than or equal to (min-heap) each of its children, according to a comparison predicate defined for the heap.
+  - _Shape Property_: A binary heap is a complete binary tree, and if the last level of the tree is not complete, the nodes of that level are filled from left to right.
+
+#### What you need to know:
+- **Priority queues** are often implemented using a heap of some form.
+- Generally implemented using an array, using indices and some basic arithmetic to keep track of parents and children.
+- **Heapsort** takes advantage of in-place operations in an array and heap property to sort in O(n log n) time.
+
 
 <hr>
 ### Array
@@ -88,12 +105,13 @@ With no further ado, the Technical Interview Cheat Sheet!
   - Static in size, meaning that they are declared with a fixed size.
 - **Dynamic arrays** (Vectors / ArrayLists) are like one dimensional arrays, but have reserved space for additional elements.
   - If a dynamic array is full, it copies it's contents to a larger array.
-- **Two dimensional arrays** have x and y indices like a grid or nested arrays.  
+- **Two dimensional arrays** have x and y indices like a grid or nested arrays.
+- Arrays can be used to implement both **stacks** and **queues**, as covered above in the Linked List section.
   
 #### Big O efficiency:
 - Indexing:         Linear array: O(1),       Dynamic array: O(1)
-- Search:           Linear array: O(n),       Dynamic array: O(n)
-- Optimized Search: Linear array: O(log n),   Dynamic array: O(log n)
+- Linear Search:    Linear array: O(n),       Dynamic array: O(n)
+- Sorted Search:    Linear array: O(log n),   Dynamic array: O(log n)
 - Insertion:        Linear array: n/a         Dynamic array: O(n)
 
 <hr>
@@ -118,9 +136,22 @@ With no further ado, the Technical Interview Cheat Sheet!
 - Insertion:        Hash Tables: O(1)  
 
 <hr>
-### Tries
+### Prefix Trees (Tries)
 
-TODO: This section is under construction.
+#### Definition
+- A specific kind of "n-ary" tree, storing words (and prefixes to those words).
+- Each node contains a letter and references to other letter nodes if that node is part of a prefix to another word.
+- If a letter node is also the last one in a word, it should contain data saying so.
+
+#### What you need to know:
+- These are NOT something you're likely to have met in school, but can be a very practical relative of the "n-ary" tree.
+- This is the best way to implement a dictionary of words, unless you can throw unrealistic amounts of money at the problem.
+- At a minimum, it supports "insert word," "search for word," and "starts with" operations.
+- Besides implementing a dictionary of words, or something with similar prefixes, this structure may not give you much mileage.
+
+#### Big-O Efficiency
+- Search:         Prefix Trees: O(n)
+- Insertion:      Prefix Trees: O(n)
 
 <hr>
 ### Graphs
@@ -153,7 +184,7 @@ TODO: This would probably be a good idea to represent since there is so much var
 
 ### Add to this section...
 - Heaps: what is, how to implement, use cases?
-- Other Trees (?)
+- Other N-ary trees, oddball questions
 
 <hr><hr>
 
@@ -200,7 +231,7 @@ TODO: This would probably be a good idea to represent since there is so much var
 - V is number of vertices
 
 
-#### Breadth First Search Vs. Depth First Search
+#### Breadth First Search vs. Depth First Search
 - The simple answer to this question is that it depends on the size and shape of the tree.
   - For wide, shallow trees use Breadth First Search
   - For deep, narrow trees use Depth First Search

@@ -23,8 +23,31 @@ With no further ado, the Technical Interview Cheat Sheet!
 
 <hr>
 
-
 ## Data Structures and Types
+
+### Array
+#### What you need to know
+- Optimal for indexing; bad at searching, inserting, and deleting (except at the end).
+- Based on [tuples](http://en.wikipedia.org/wiki/Tuple) from set theory.
+- Stores data elements based on a sequential index starting from 0.
+- They are one of the most commonly used data structures, foundational to the implementation of many other data structure.
+
+#### Flavors
+- **Linear Arrays**: one-dimensional, static / fixed size determined when created.
+  - Documentation: [Java](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Arrays.html), [Python](https://docs.python.org/3/library/array.html), [C](https://www.gnu.org/software/gnu-c-manual/gnu-c-manual.html#Arrays)
+    - Python arrays are not fixed length; you'd have to import NumPy to get that limitation. Built-in Python arrays are dynamic arrays.
+- **Dynamic arrays** are like one dimensional arrays, but have reserved space for additional elements. If a dynamic array is full, it copies its contents to a larger array.
+  - Documentation: [Java ArrayList](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/ArrayList.html), [Python List](https://docs.python.org/3/tutorial/datastructures.html#more-on-lists), [C++ Vector](https://en.cppreference.com/w/cpp/container/vector)
+- **Two dimensional arrays**, or nested arrays, have x and y indices like a grid.
+- Arrays can be used to implement both **stacks** and **queues**, as covered in the Linked List section.
+  
+#### Big O efficiency:
+- Indexing:         Linear array: O(1),       Dynamic array: O(1)
+- Linear Search:    Linear array: O(n),       Dynamic array: O(n)
+- Sorted Search:    Linear array: O(log n),   Dynamic array: O(log n)
+- Insertion:        Linear array: n/a         Dynamic array: O(n)
+
+<hr>
 
 ### Linked List
 
@@ -52,6 +75,7 @@ With no further ado, the Technical Interview Cheat Sheet!
 - Insertion:          Linked Lists: O(1)  
 
 <hr>
+
 ### Binary Tree
 
 #### Definition:
@@ -91,30 +115,9 @@ With no further ado, the Technical Interview Cheat Sheet!
 - **Heapsort** takes advantage of in-place operations in an array and heap property to sort in O(n log n) time.
 
 
-<hr>
-### Array
-
-#### Definition:
-- Stores data elements based on an sequential, most commonly 0 based, index.
-- Based on [tuples](http://en.wikipedia.org/wiki/Tuple) from set theory.
-- They are one of the oldest, most commonly used data structures.  
-  
-#### What you need to know:
-- Optimal for indexing; bad at searching, inserting, and deleting (except at the end).
-- **Linear arrays**, or one dimensional arrays, are the most basic.
-  - Static in size, meaning that they are declared with a fixed size.
-- **Dynamic arrays** (Vectors / ArrayLists) are like one dimensional arrays, but have reserved space for additional elements.
-  - If a dynamic array is full, it copies it's contents to a larger array.
-- **Two dimensional arrays** have x and y indices like a grid or nested arrays.
-- Arrays can be used to implement both **stacks** and **queues**, as covered above in the Linked List section.
-  
-#### Big O efficiency:
-- Indexing:         Linear array: O(1),       Dynamic array: O(1)
-- Linear Search:    Linear array: O(n),       Dynamic array: O(n)
-- Sorted Search:    Linear array: O(log n),   Dynamic array: O(log n)
-- Insertion:        Linear array: n/a         Dynamic array: O(n)
 
 <hr>
+
 ### Hash Table or Hash Map
 
 #### Definition:
@@ -136,6 +139,7 @@ With no further ado, the Technical Interview Cheat Sheet!
 - Insertion:        Hash Tables: O(1)  
 
 <hr>
+
 ### Prefix Trees (Tries)
 
 #### Definition
@@ -154,6 +158,7 @@ With no further ado, the Technical Interview Cheat Sheet!
 - Insertion:      Prefix Trees: O(n)
 
 <hr>
+
 ### Graphs
 
 #### Definition:
@@ -297,7 +302,7 @@ TODO: This would probably be a good idea to represent since there is so much var
 - Average Case Sort: Merge Sort: O(n log n)
 - Worst Case Sort: Merge Sort: O(n^2)
 
-###Bubble Sort
+### Bubble Sort
 
 #### Definition:
 - A comparison based sorting algorithm

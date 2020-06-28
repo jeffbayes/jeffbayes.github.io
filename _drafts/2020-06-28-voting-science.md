@@ -15,3 +15,8 @@ I don't think I'm inspiring much vitriol when I say the current voting system in
 - Majority
   - Relaxed Majority
  
+#### Sources
+- [Equal Voting Coalition](https://www.equal.vote/), supporting [STAR Voting](https://www.starvoting.us/). Try it [here](https://star.vote/)!
+- [FairVote](https://www.fairvote.org/), supporting [Ranked Choice / Instant Runoff voting](https://www.fairvote.org/rcv#how_rcv_works).
+- [Center for Election Science](https://www.electionscience.org/), supporting [Approval Voting](https://www.electionscience.org/approval-voting-101).
+- [Center for Range Voting](https://www.rangevoting.org/), supporting - you guessed it - [Range (or Score) Voting](https://www.rangevoting.org/)

@@ -30,12 +30,12 @@ With no further ado, the Technical Interview Cheat Sheet!
 
 #### Definition:
 - Stores data with **nodes** that point to other nodes.
-  - Nodes, at their most basic, have one datum and one reference (another node).
+  - Nodes, at their most basic, have one datum and one reference (the next node, generally `next`).
   - A linked list _chains_ nodes together by pointing one node's reference towards another node.  
 
 #### What you need to know:
 - Designed to optimize insertion and deletion, slow at indexing and searching.
-- **Doubly linked lists** have nodes that reference the previous node.
+- **Doubly linked lists** have nodes that reference the previous node in addition to the next node.
 - A **circularly linked list** is simple linked list whose **tail**, the last node, references the **head**, the first node.
 - **Stacks** are commonly implemented with linked lists, but can also be made from arrays.
   - Stacks are **last in, first out** (LIFO) data structures.
@@ -45,32 +45,37 @@ With no further ado, the Technical Interview Cheat Sheet!
   - Queues are a **first in, first out** (FIFO) data structure.
   - Made with a doubly linked list that only removes from head and adds to tail.  
   - Array implementation pushes to end of array and pops from front of array. Two variables needed, to track front and back of queue. If you're really swanky, you can use the array circularly.
-
-#### Big O efficiency:
-- Indexing:           Linked Lists: O(n)
-- Search:             Linked Lists: O(n)
-- Insertion:          Linked Lists: O(1)  
+  
+#### Operations w/ Big O efficiency
+Linked lists are a chain of nodes; operations are performed on the nodes.
+- `.next` and `.prev`: O(1) operations.
+- Search: O(n), performed by `.next` and `.prev` operations.
+- Indexing: O(n), performed by `.next` and `.prev` operations.
+- Insertion: O(n) if anywhere but beginning, performed by `.next` and `.prev` operations.
+  - Insertion at beginning is O(1).
+- Deletion: O(n) if anywhere but beginning, performed by `.next` and `.prev` operations.
+  - Deletion at beginning is O(1).
 
 <hr>
+
 ### Binary Tree
 
 #### Definition:
-- Is a tree like data structure where every node has at most two children.
-  - There is one left and right child node.
-  - "N-ary" trees, including **tries / prefix trees**, have more than two children. Those are covered later.
+- Is a data structure composed of connected nodes, where each node has at most two children (left and right).
+  - "N-ary" trees, including **prefix trees (tries)**, have more than two children. Those are covered later.
 
 #### What you need to know:
 - Designed to optimize searching and sorting.
 - A **degenerate tree** is an unbalanced tree, which if entirely one-sided is a essentially a linked list.
 - They are comparably simple to implement than other data structures.
-- Used to make **binary search trees**.
-  - A binary tree that uses comparable keys to assign which direction a child is.
-  - Left child has a key smaller than it's parent node.
-  - Right child has a key greater than it's parent node.
-  - There can be no duplicate node.
-  - Because of the above it is more likely to be used as a data structure than a binary tree.
+- Used to make **binary search trees** and **binary heaps**.
+- Multiple implementation options:
+  - Node-based: literal left / right / parent nodes, implemented as independent data structures to make up a binary tree.
+  - Array-based: uses indices and basic arithmetic (node_index\*2 is left, \*2+1 is right) to keep track of parents and children.
 
-#### Big O efficiency:
+#### Operations w/ Big O efficiency:
+Binary Trees are collections of left and right child nodes, beginning at a parent node.
+- `.left`, `.right`, `.parent`: O(1) operations to reach a known connected node.
 - Indexing:       Binary Search Tree: O(log n)      Binary Tree: O(n)
 - Search:         Binary Search Tree: O(log n)      Binary Tree: O(n)
 - Insertion:      Binary Search Tree: O(log n)      Binary Tree: O(n)
@@ -80,18 +85,31 @@ With no further ado, the Technical Interview Cheat Sheet!
 ### Binary Heap
 
 #### Definition
-- Organized by some priority; generally a "min-heap" or "max-heap."
-- Always maintains the **heap property** and **shape property**.
-  - _Heap Property_: All nodes are either greater than or equal to (max-heap) or less than or equal to (min-heap) each of its children, according to a comparison predicate defined for the heap.
+- Specific implementation of a **Binary Tree**, organized by some priority; generally a _"min-heap"_ or _"max-heap"_.
+- Implementations must maintain the **heap property** and **shape property**.
+  - _Heap Property_: All nodes are either greater than or equal to _(max-heap)_ **or** less than or equal to _(min-heap)_ each of its children, according to a comparison predicate defined for the heap.
   - _Shape Property_: A binary heap is a complete binary tree, and if the last level of the tree is not complete, the nodes of that level are filled from left to right.
 
 #### What you need to know:
 - **Priority queues** are often implemented using a heap of some form.
-- Generally implemented using an array, using indices and some basic arithmetic to keep track of parents and children.
 - **Heapsort** takes advantage of in-place operations in an array and heap property to sort in O(n log n) time.
 
+<hr>
+
+### Binary Search Tree
+
+#### Definition
+- Specific implementation of a **Binary Tree**.
+
+#### What you need to know:
+- A binary tree that uses comparable keys to assign which direction a child is.
+- Left child has a key smaller than it's parent node.
+- Right child has a key greater than it's parent node.
+- There can be no duplicate node.
+- Because of the above it is more likely to be used as a data structure than a binary tree.
 
 <hr>
+
 ### Array
 
 #### Definition:
@@ -115,6 +133,7 @@ With no further ado, the Technical Interview Cheat Sheet!
 - Insertion:        Linear array: n/a         Dynamic array: O(n)
 
 <hr>
+
 ### Hash Table or Hash Map
 
 #### Definition:
@@ -136,6 +155,7 @@ With no further ado, the Technical Interview Cheat Sheet!
 - Insertion:        Hash Tables: O(1)  
 
 <hr>
+
 ### Prefix Trees (Tries)
 
 #### Definition
@@ -154,6 +174,7 @@ With no further ado, the Technical Interview Cheat Sheet!
 - Insertion:      Prefix Trees: O(n)
 
 <hr>
+
 ### Graphs
 
 #### Definition:
@@ -297,7 +318,7 @@ TODO: This would probably be a good idea to represent since there is so much var
 - Average Case Sort: Merge Sort: O(n log n)
 - Worst Case Sort: Merge Sort: O(n^2)
 
-###Bubble Sort
+### Bubble Sort
 
 #### Definition:
 - A comparison based sorting algorithm
